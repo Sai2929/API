@@ -1,0 +1,114 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+  body{
+    background: #53514c;
+    padding: 0 10px;
+  }
+
+.input-group {
+    position: relative;
+}
+input{
+    display: block;
+    padding: 10px;
+   
+    outline: none;
+    border-radius: 4px;
+    font: inherit;
+}
+
+label{
+    position: absolute; 
+    display: inline-flex;
+    column-gap: 10px;
+    align-items: center;
+    transition: transform .25s;
+    margin-left: -25px;
+}
+.icon{
+    display: inline-flex;
+    opacity: 0;
+}
+
+input:focus+label {
+    transform: translateX(26px);
+}
+input:focus+label .icon{
+    opacity: 1;
+    transition-delay: .1s;
+}
+input :: ::placeholder{
+    transition: opacity .25s;
+}
+
+input:focus::placeholder { 
+    opacity: 0;
+}
+
+
+.wrapper{
+  max-width: 500px;
+  width: 100%;
+  background: #fff;
+  margin: 50px auto;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.125);
+  padding: 30px;
+}
+
+.wrapper .title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #fec107;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .wrapper .form{
+    width: 100%;
+  }
+  
+  .wrapper .form .inputfield{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+
+  .input-group{
+      position: relative;
+
+  }
+  .input{
+      padding: 10px;
+      border-radius: 4px;
+      font: inherit;
+      color: #fff;
+      background-color: transparent;
+      outline: 2px solid #fff;
+
+  }
+
+  .input-label {
+      position: absolute;
+      transform: translate(10px, 10px);
+      transition: transform .25s;
+  }
+
+  .input:focus+.input-label,
+  .input:valid+.input-label{
+      transform: translate(10px, -14px) scale(.8);
+      color: #d1c5fc;
+
+  }
+  .input:is(:focus, :valid){
+      outline-color: #d1c5fc;
+  }
+  
